@@ -113,6 +113,39 @@ body{
     margin-bottom: 80px;
 }
 
+.full-screen-swiper .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 48vh;
+    backdrop-filter: blur(2px);
+}
+
+.full-screen-swiper .overlay-text .title {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+.full-screen-swiper .overlay-text .description {
+    font-size: 1.38rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.full-screen-swiper .overlay-text .learn-more {
+    background: none;
+    border: 1px solid white;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
 .full-screen-swiper .swiper {
     width: 100%;
     height: 100%;
