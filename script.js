@@ -30,6 +30,13 @@ var swiper = new Swiper(".things_to_do_section .mySwiper", {
     },
 });
 
+var swiper = new Swiper(".Know_destinations_section .mySwiper", {
+    direction: 'vertical',
+    effect: 'slide',
+    slidesPerView: 2,
+    mousewheel: true,
+});
+
 window.onscroll = function () {
     var header = $(".page-header");
     console.log(header);
