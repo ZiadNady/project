@@ -29,3 +29,23 @@ var swiper = new Swiper(".things_to_do_section .mySwiper", {
         hide: true,
     },
 });
+
+window.onscroll = function () {
+    var header = $(".page-header");
+    console.log(header);
+    if (window.pageYOffset > (window.innerHeight * 0.2)) {
+        header.css('background-color', 'white');
+        $(".menu-item").css('color', 'black');
+        $(".nav-button").css('color', 'black');
+        $(".logo").css('color', 'black');
+        $(".login").css('color', 'white');
+        $(".login").css('background-color', 'rgb(120, 0, 110)');
+    }else {
+        header.css('background-color', 'black');
+        $(".menu-item").css('color', 'white');
+        $(".nav-button").css('color', 'white');
+        $(".logo").css('color', 'white');
+        $(".login").css('color', 'rgb(113, 113, 113)');
+        $(".login").css('background-color', 'white');
+    }
+};
