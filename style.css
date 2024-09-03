@@ -173,6 +173,10 @@ body{
 }
 
 /*  */
+.what_is_happening_section{
+    margin-bottom: 80px;
+}
+
 .what_is_happening_section .header-container{
     padding: 0 100px 40px 100px;
 }
@@ -195,6 +199,7 @@ body{
     width: 350px;
     position: relative;
     border: none;
+    background: none;
 }
 
 .what_is_happening_section .card .date{
@@ -257,4 +262,56 @@ body{
     background: rgb(190 ,0 ,141);
 }
 /*  */
+.things_to_do_section{
+    margin-bottom: 80px;
+}
 
+.things_to_do_section .header-container{
+    padding: 0 100px 40px 100px;
+}
+.things_to_do_section .header{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.things_to_do_section .View-all{
+    color: rgb(120, 0, 110);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.things_to_do_section .swiper{
+    padding-left: 10%;
+}
+.things_to_do_section .card{
+    width: 900px;
+    position: relative;
+    border: none;
+    background: none;
+}
+
+.things_to_do_section .card .image{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.things_to_do_section .card .card-body{
+    padding-top: 10px;
+}
+
+.things_to_do_section .card-title{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.things_to_do_section .visit-website-button{
+    color: white;
+    background: rgb(120 ,0 ,110);
+    border: none;
+    border-radius: 5px;
+}
+
+.things_to_do_section .visit-website-button:hover{
+    background: rgb(190 ,0 ,141);
+}

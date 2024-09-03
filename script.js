@@ -20,3 +20,12 @@ var swiper = new Swiper(".what_is_happening_section .mySwiper", {
     },
 });
 
+var swiper = new Swiper(".things_to_do_section .mySwiper", {
+    slidesPerView: 1.5,
+    centeredSlides: true,
+    loop: true,
+    scrollbar: {
+        el: ".things_to_do_section .swiper-scrollbar",
+        hide: true,
+    },
+});
