@@ -1,0 +1,226 @@
+/* use font fonts/SaudiSans-VF.ttf */
+
+@font-face {
+    font-family: SaudiSans;
+    src: url(fonts/SaudiSans-VF.ttf);
+}
+
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: SaudiSans, sans-serif;
+}
+
+body{
+    position: relative;
+    background-color: rgb(248, 248, 248);
+}
+/*  */
+.page-header {
+    background-color: rgba(0, 0, 0, .9);
+    padding: 1rem 75pt;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+.logo {
+    color: white;
+    font-size: 2.0rem;
+}
+
+.logo .logo-text{
+    margin: 0;
+}
+
+.nav-bar {
+    margin: 0;
+}
+
+.nav-bar .menu-item {
+    color: white;
+    padding: 0 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.menu-icon {
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-button{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.buttons-container{
+    gap: 0.75rem;
+}
+
+.buttons-container .nav-button {
+    background-color: hsla(0,0%,100%,.2);
+    padding: 0.75rem 1.25rem;
+    border-radius: 30px;
+}
+
+.buttons-container .nav-button.search {
+    border-radius: 50%;
+    padding: 0.75rem 1rem;
+}
+
+.buttons-container .nav-button.login {
+    color: rgb(113,113,113);
+    background-color: white;
+}
+
+@media screen and (max-width: 700px) {
+    .nav-bar {
+        display: none;
+        position: absolute;
+        top: 3.7rem;
+        left: 0;
+        width: 100%;
+        background-color: var(--bgcolor);
+        text-align: center;
+    }
+
+    .nav-bar.responsive {
+        display: block;
+    }
+
+    .nav-bar .menu-item {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 1;
+    }
+    
+    .logo {
+        font-size: 1.4rem;
+    }
+}
+/*  */
+.full-screen-swiper {
+    position: relative;
+    height: 70%;
+    margin-bottom: 80px;
+}
+
+.full-screen-swiper .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.full-screen-swiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-screen-swiper .swiper-slide .image {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.full-screen-swiper .swiper-scrollbar-drag{
+    background-color: white;
+}
+
+/*  */
+.what_is_happening_section .header-container{
+    padding: 0 100px 40px 100px;
+}
+.what_is_happening_section .header{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.what_is_happening_section .View-all{
+    color: rgb(120, 0, 110);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.what_is_happening_section .swiper{
+    padding-left: 6%;
+}
+.what_is_happening_section .card{
+    width: 350px;
+    position: relative;
+    border: none;
+}
+
+.what_is_happening_section .card .date{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.what_is_happening_section .card .date .from,
+.what_is_happening_section .card .date .to{
+    font-size: 22px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.what_is_happening_section .card .date .to{
+    border-top: 1px solid rgba(170, 170, 170, 0.4);
+}
+
+.what_is_happening_section .card .date .from .day,
+.what_is_happening_section .card .date .to .day{
+    font-size: 36px;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.what_is_happening_section .card .image{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.what_is_happening_section .card .card-body{
+    padding-top: 10px;
+}
+
+.what_is_happening_section .ticket-date-from{
+    position: absolute;
+    top: 10px;
+    right: 16px;
+}
+
+.what_is_happening_section .card-title{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+.what_is_happening_section .ticket-button{
+    color: white;
+    background: rgb(120 ,0 ,110);
+    border: none;
+    border-radius: 5px;
+}
+
+.what_is_happening_section .ticket-button:hover{
+    background: rgb(190 ,0 ,141);
+}
+/*  */
+
