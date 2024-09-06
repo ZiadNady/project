@@ -21,8 +21,9 @@ body{
     padding: 1rem 75pt;
     position: fixed;
     z-index: 999;
-    width: 100%;
+    width: 100vw;
     transition: all 0.3s ease;
+    opacity: 95%;
 }
 
 .logo {
@@ -89,11 +90,12 @@ body{
     .nav-bar {
         display: none;
         position: absolute;
-        top: 3.7rem;
+        top: 4.7rem;
         left: 0;
         width: 100%;
-        background-color: var(--bgcolor);
+        background-color: white;
         text-align: center;
+        color: black;
     }
 
     .nav-bar.responsive {
@@ -102,6 +104,7 @@ body{
 
     .nav-bar .menu-item {
         display: block;
+        color: black;
     }
 
     .menu-icon {
@@ -112,11 +115,27 @@ body{
     .logo {
         font-size: 1.4rem;
     }
+
+    .lang, .visa, .login {
+        display: none;
+    }
+
+    .page-header{
+        padding: 1rem 10pt;
+    }
+
+    .buttons-container{
+        align-items: center;
+    }
+
+    .buttons-container .nav-button{
+        background: none;
+    }
 }
 /*  */
 .full-screen-swiper {
     position: relative;
-    height: 70%;
+    height: 100vh; /* Adjusted for responsiveness */
     margin-bottom: 80px;
 }
 
@@ -127,31 +146,33 @@ body{
     text-align: center;
     color: white;
     width: 100%;
-    height: 48vh;
+    height: 50vh; /* Adjusted for responsiveness */
     backdrop-filter: blur(2px);
+    padding: 20px; /* Added padding for better spacing */
+    box-sizing: border-box; /* Ensures padding is included in the height calculation */
 }
 
 .full-screen-swiper .overlay-text .title {
-    font-size: 5rem;
+    font-size: 5pc; /* Reduced size for better responsiveness */
     font-weight: 700;
-    margin-bottom: 28px;
-    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 16px;
+    margin-bottom: 1.5rem; /* Adjusted margin */
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 8px; /* Reduced shadow size */
 }
 
 .full-screen-swiper .overlay-text .description {
-    font-size: 1.38rem;
+    font-size: 22px; /* Adjusted font size */
     font-weight: 500;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem; /* Adjusted margin */
 }
 
 .full-screen-swiper .overlay-text .learn-more {
     background: none;
     border: 1px solid white;
-    padding: 10px 10px;
+    padding: 8px 16px; /* Adjusted padding for responsiveness */
     color: white;
     border-radius: 10px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1pc; /* Adjusted font size */
 }
 
 .full-screen-swiper .swiper {
@@ -171,45 +192,133 @@ body{
 .full-screen-swiper .swiper-slide .image {
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* Adjusted height for responsiveness */
     object-fit: cover;
 }
 
-.full-screen-swiper .swiper-scrollbar-drag{
+.full-screen-swiper .swiper-scrollbar-drag {
     background-color: white;
 }
 
+.full-screen-swiper .swiper-pagination-bullet{
+    transition: 1s ease;
+    background: #717171 !important;
+}
+
+.full-screen-swiper .swiper-pagination-bullet-active{
+    width: 25px;
+    border-radius: 10px;
+    background: #be008d !important;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .full-screen-swiper .overlay-text .title {
+        font-size: 2rem;
+    }
+
+    .full-screen-swiper .overlay-text .description {
+        font-size: 0.9rem;
+    }
+
+    .full-screen-swiper .overlay-text .learn-more {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .full-screen-swiper {
+        min-height: 650px;
+    }
+
+    .full-screen-swiper .overlay-text {
+        height: 45vh;
+        padding: 10px;
+    }
+
+    .full-screen-swiper .overlay-text .title {
+        font-size: 56px;
+    }
+
+    .full-screen-swiper .overlay-text .description {
+        font-size: 20px;
+    }
+
+    .full-screen-swiper .overlay-text .learn-more {
+        font-size: 1pc;
+        padding: 0.75rem 1rem;
+    }
+    
+    .full-screen-swiper .swiper-slide .image{
+        object-fit: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .full-screen-swiper {
+        height: 50vh; /* Further adjusted height for small screens */
+    }
+
+    .full-screen-swiper .overlay-text {
+        height: 45vh;
+    }
+
+    .full-screen-swiper .overlay-text .title {
+        font-size: 56px;
+    }
+
+    .full-screen-swiper .overlay-text .description {
+        font-size: 20px;
+    }
+
+    .full-screen-swiper .overlay-text .learn-more {
+        font-size: 1pc;
+        padding: 0.75rem 1rem;
+    }
+
+    .full-screen-swiper .swiper-slide .image{
+        object-fit: none;
+    }
+    
+}
+
+
 /*  */
-.what_is_happening_section{
+.what_is_happening_section {
     margin-bottom: 80px;
 }
 
-.what_is_happening_section .header-container{
-    padding: 0 100px 40px 100px;
+.what_is_happening_section .header-container {
+    padding: 0 5% 40px; /* Adjusted padding for better responsiveness */
 }
-.what_is_happening_section .header{
-    font-size: 3rem;
+
+.what_is_happening_section .header {
+    font-size: 2.5rem; /* Reduced for smaller screens */
     font-weight: 700;
 }
 
-.what_is_happening_section .View-all{
+.what_is_happening_section .View-all {
     color: rgb(120, 0, 110);
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
 }
 
-.what_is_happening_section .swiper{
-    padding-left: 6%;
+.what_is_happening_section .swiper {
+    padding-left: 0; /* Removed padding for smaller screens */
 }
-.what_is_happening_section .card{
-    width: 350px;
+
+.what_is_happening_section .card {
+    width: 100%; /* Full width for smaller screens */
+    max-width: 350px; /* Max width for larger screens */
     position: relative;
     border: none;
     background: none;
+    margin: 0 auto; /* Centered for smaller screens */
 }
 
-.what_is_happening_section .card .date{
+.what_is_happening_section .card .date {
     position: absolute;
     top: 0;
     left: 0;
@@ -219,101 +328,192 @@ body{
 }
 
 .what_is_happening_section .card .date .from,
-.what_is_happening_section .card .date .to{
-    font-size: 22px;
+.what_is_happening_section .card .date .to {
+    font-size: 18px; /* Adjusted font size */
     color: white;
     font-family: sans-serif;
     text-align: center;
 }
 
-.what_is_happening_section .card .date .to{
+.what_is_happening_section .card .date .to {
     border-top: 1px solid rgba(170, 170, 170, 0.4);
 }
 
 .what_is_happening_section .card .date .from .day,
-.what_is_happening_section .card .date .to .day{
-    font-size: 36px;
+.what_is_happening_section .card .date .to .day {
+    font-size: 28px; /* Reduced font size */
     margin-bottom: 0;
     line-height: 1;
 }
 
-.what_is_happening_section .card .image{
+.what_is_happening_section .card .image {
     width: 100%;
     border-radius: 20px;
 }
 
-.what_is_happening_section .card .card-body{
+.what_is_happening_section .card .card-body {
     padding-top: 10px;
 }
 
-.what_is_happening_section .ticket-date-from{
+.what_is_happening_section .ticket-date-from {
     position: absolute;
     top: 10px;
     right: 16px;
 }
 
-.what_is_happening_section .card-title{
+.what_is_happening_section .card-title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px; /* Adjusted font size */
 }
 
-
-.what_is_happening_section .ticket-button{
+.what_is_happening_section .ticket-button {
     color: white;
-    background: rgb(120 ,0 ,110);
+    background: rgb(120, 0, 110);
     border: none;
     border-radius: 5px;
 }
 
-.what_is_happening_section .ticket-button:hover{
-    background: rgb(190 ,0 ,141);
+.what_is_happening_section .ticket-button:hover {
+    background: rgb(190, 0, 141);
 }
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+    .what_is_happening_section .header {
+        font-size: 2rem;
+    }
+
+    .what_is_happening_section .card .date .from,
+    .what_is_happening_section .card .date .to {
+        font-size: 16px;
+    }
+
+    .what_is_happening_section .card .date .from .day,
+    .what_is_happening_section .card .date .to .day {
+        font-size: 24px;
+    }
+
+    .what_is_happening_section .card-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .what_is_happening_section .header {
+        font-size: 1.5rem;
+    }
+
+    .what_is_happening_section .card .date .from,
+    .what_is_happening_section .card .date .to {
+        font-size: 14px;
+    }
+
+    .what_is_happening_section .card .date .from .day,
+    .what_is_happening_section .card .date .to .day {
+        font-size: 20px;
+    }
+
+    .what_is_happening_section .card-title {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .what_is_happening_section .header {
+        font-size: 1.2rem;
+    }
+
+    .what_is_happening_section .card .date .from,
+    .what_is_happening_section .card .date .to {
+        font-size: 12px;
+    }
+
+    .what_is_happening_section .card .date .from .day,
+    .what_is_happening_section .card .date .to .day {
+        font-size: 18px;
+    }
+
+    .what_is_happening_section .card-title {
+        font-size: 10px;
+    }
+}
+
 /*  */
-.things_to_do_section{
+.things_to_do_section {
     margin-bottom: 80px;
 }
 
-.things_to_do_section .header-container{
-    padding: 0 100px 40px 100px;
+.things_to_do_section .header-container {
+    padding: 0 20px 40px;
+    text-align: center;
 }
-.things_to_do_section .header{
-    font-size: 3rem;
+
+.things_to_do_section .header {
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
-.things_to_do_section .swiper{
-    padding-left: 10%;
+/* Swiper and Card Styles */
+.things_to_do_section .swiper {
+    padding-left: 5%;
 }
-.things_to_do_section .card{
-    width: 900px;
+
+.things_to_do_section .card {
+    width: 100%;
+    max-width: 900px;
     position: relative;
     border: none;
     background: none;
 }
 
-.things_to_do_section .card .image{
+.things_to_do_section .card .image {
     width: 100%;
     border-radius: 20px;
 }
 
-.things_to_do_section .card .card-body{
+.things_to_do_section .card-body {
     padding-top: 10px;
 }
 
-.things_to_do_section .card-title{
+.things_to_do_section .card-title {
     font-weight: 700;
     font-size: 18px;
 }
 
-.things_to_do_section .visit-website-button{
+.things_to_do_section .visit-website-button {
     color: white;
-    background: rgb(120 ,0 ,110);
+    background: rgb(120, 0, 110);
     border: none;
     border-radius: 5px;
 }
 
-.things_to_do_section .visit-website-button:hover{
-    background: rgb(190 ,0 ,141);
+.things_to_do_section .visit-website-button:hover {
+    background: rgb(190, 0, 141);
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .things_to_do_section .header {
+        font-size: 3rem;
+    }
+
+    .things_to_do_section .swiper {
+        padding-left: 10%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .things_to_do_section .header-container {
+        padding: 0 100px 40px;
+    }
+
+    .things_to_do_section .card {
+        width: 900px;
+    }
+
+    .things_to_do_section .header {
+        font-size: 3.5rem;
+    }
 }
 /*  */
 
@@ -328,6 +528,7 @@ body{
 .Know_destinations_section .header {
     font-size: 3rem;
     font-weight: 700;
+    text-align: left;
 }
 
 .Know_destinations_section .View-all {
@@ -339,19 +540,21 @@ body{
 
 .Know_destinations_section .content-container {
     display: flex;
+    flex-wrap: wrap;
     padding: 0 100px;
+    gap: 20px;
 }
 
 .Know_destinations_section .mySwiper {
-    height: 660px;
-    width: 20%;
-    margin-right: 20px;
-    margin-left: 100px;
+    height: 1000px;
+    width: 100%;
+    max-width: 400px;
     display: inline-block;
 }
 
 .Know_destinations_section .card {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     position: relative;
     border: none;
     background: none;
@@ -372,73 +575,117 @@ body{
 }
 
 .Know_destinations_section #map-container {
-    width: 70%;
-    display: inline-block;
+    width: 100%;
+    max-width: 1000px;
+    flex-grow: 1;
 }
 
 .Know_destinations_section .map{
     border-radius: 20px;
+    width: 100%;
+    height: 100%;
 }
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .Know_destinations_section .content-container {
+        flex-direction: column;
+        padding: 0 50px;
+    }
+    
+    .Know_destinations_section .mySwiper {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .Know_destinations_section .header-container {
+        padding: 0 50px 30px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Know_destinations_section .header {
+        font-size: 2rem;
+    }
+
+    .Know_destinations_section .mySwiper {
+        height: 400px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .Know_destinations_section .map{
+        height: 450px;
+    }
+
+    .Know_destinations_section .card-title {
+        font-size: 16px;
+    }
+
+    .Know_destinations_section .View-all {
+        font-size: 12px;
+    }
+}
+
 /*  */
 
-.stories_and_insights_section{
+.stories_and_insights_section {
     margin-bottom: 80px;
     padding: 0 100px;
 }
 
-.stories_and_insights_section .header-container{
+.stories_and_insights_section .header-container {
     padding: 0 0 40px 0;
 }
-.stories_and_insights_section .header{
+
+.stories_and_insights_section .header {
     font-size: 3rem;
     font-weight: 700;   
 }
 
+.stories_and_insights_section .images-gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stories_and_insights_section .swiper-container {
+    overflow: hidden;
+}
+
+.stories_and_insights_section .swiper-wrapper {
+    display: flex;
+}
+
 .stories_and_insights_section .image-container {
-    width: calc(100%/3);
+    width: calc(100% / 3);
     height: 800px;
     overflow: hidden;
     position: relative;
+    transition: transform 0.5s ease-in-out;
 }
 
-.stories_and_insights_section .image-container:first-child{
+.stories_and_insights_section .image-container:first-child {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
 
-.stories_and_insights_section .image-container:last-child{
+.stories_and_insights_section .image-container:last-child {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-}
-
-
-.stories_and_insights_section .images-gallery{
-    border-radius: 20px;
-    height: 800px;
 }
 
 .stories_and_insights_section .image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
+    transition: transform 0.5s ease-in-out;
 }
 
 .stories_and_insights_section .image-container:hover .image {
     transform: scale(1.46);
-}
-
-.stories_and_insights_section .image-container:first-child .image{
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
-.stories_and_insights_section .image-container:last-child .image{
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
 }
 
 .stories_and_insights_section .overlay {
@@ -470,19 +717,34 @@ body{
     padding-bottom: 4rem;
     padding-top: 1rem;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .stories_and_insights_section {
+        padding: 0 20px;
+    }
+    
+    .stories_and_insights_section .image-container {
+        width: 100%;
+        height: 400px;
+    }
+
+    .stories_and_insights_section .header {
+        font-size: 2rem;
+    }
+}
+
 /*  */
 footer {
     background-color: rgb(248, 248, 248);
 }
 
 .footer-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 2.5rem 250pt;
+    padding: 2.5rem 0;
 }
 
 .footer-column {
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .footer-column h4 {
@@ -520,12 +782,9 @@ footer {
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
     background: black;
     color: white;
-    justify-content: center;
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 .footer-bottom p {
@@ -541,10 +800,21 @@ footer {
 
 .footer-bottom ul li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .footer-bottom ul li a {
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom ul {
+        justify-content: center;
+    }
 }

@@ -6,35 +6,104 @@ function onMenuClick() {
 }
 
 var swiper = new Swiper(".full-screen-swiper .mySwiper", {
-    scrollbar: {
-        el: ".full-screen-swiper .swiper-scrollbar",
-        hide: true,
-    }, 
+    
+    breakpoints: {
+        768: {
+            scrollbar: {
+                el: ".full-screen-swiper .swiper-scrollbar",
+                hide: true,
+            },
+        },
+        0: {
+            pagination: {
+                el: ".full-screen-swiper .swiper-pagination",
+            }
+        }
+    }
 });
 
 var swiper = new Swiper(".what_is_happening_section .mySwiper", {
-    slidesPerView: 4.5,
+    slidesPerView: 4,
+    spaceBetween: 20,
     scrollbar: {
         el: ".what_is_happening_section .swiper-scrollbar",
         hide: true,
     },
+    breakpoints: {
+        1200: {
+            slidesPerView: 4,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        0: {
+            slidesPerView: 1,
+        }
+    }
 });
 
+
 var swiper = new Swiper(".things_to_do_section .mySwiper", {
-    slidesPerView: 1.5,
+    slidesPerView: 1,
+    spaceBetween: 10,
     centeredSlides: true,
     loop: true,
-    scrollbar: {
-        el: ".things_to_do_section .swiper-scrollbar",
-        hide: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        }
+    }
 });
+
+var swiper = new Swiper('.stories_and_insights_section .swiper-container', {
+    slidesPerView: 3, // Show half of the side slides
+    centeredSlides: true, // Start from the middle slide
+    spaceBetween: 20, 
+    breakpoints: {
+        768: {
+            slidesPerView: 3, // Adjust for mobile view
+            centeredSlides: false, // Adjust for mobile view
+            spaceBetween: 0,
+        },
+        0: {
+            slidesPerView: 1, // Adjust for mobile view
+        }
+    }
+});
+
 
 var swiper = new Swiper(".Know_destinations_section .mySwiper", {
     direction: 'vertical',
     effect: 'slide',
     slidesPerView: 2,
+    spaceBetween: 20,
     mousewheel: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            direction: 'horizontal',
+        },
+        1024: {
+            slidesPerView: 3,
+            direction: 'vertical',
+        }
+    }
 });
 
 window.onscroll = function () {
